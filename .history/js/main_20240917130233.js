@@ -11,7 +11,7 @@
 }
 
 // Load header.html into the header div
-loadHTML("navbarCollapse", "../components/menu.html");
+loadHTML("navbarCollapse", "menu.html");
 
 // Add an event listener to the call link
 document.getElementById('call-link').addEventListener('click', function(event) {
@@ -41,6 +41,20 @@ document.getElementById('call-link').addEventListener('click', function(event) {
             alert('VoIP application not available. Please use your phone to call.');
         }
     }
+});
+
+// Removes the Elfsight link from the page
+document.addEventListener("DOMContentLoaded", function() {
+    // Delay the execution slightly to ensure the element is loaded
+    setTimeout(function() {
+        var elfsightLink = document.querySelector('a[href*="elfsight.com/google-reviews-widget"]');
+        if (elfsightLink) {
+            elfsightLink.remove();
+            console.log('Elfsight link removed');
+        } else {
+            console.log('Elfsight link not found');
+        }
+    }, 1000); // 1000ms = 1 second delay
 });
 
 //jQuery for page scrolling feature - requires jQuery Easing plugin

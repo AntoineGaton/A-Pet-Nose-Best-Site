@@ -1,16 +1,39 @@
- // Function to load an external HTML file. Using this to load components html files into the main index.html file
- function loadHTML(id, filename) {
+function initializeMenu() {
+    const menuToggle = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    
+    if (menuToggle && navbarCollapse) {
+        menuToggle.addEventListener('click', function() {
+            navbarCollapse.classList.toggle('show');
+        });
+    }
+
+    // Add event listeners to close menu when a link is clicked
+    const menuLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth < 992) { // Only on mobile
+                navbarCollapse.classList.remove('show');
+            }
+        });
+    });
+}
+
+function loadHTML(id, filename) {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
             document.getElementById(id).innerHTML = this.responseText;
+            if (id === "navbarCollapse") {
+                initializeMenu();
+            }
         }
     };
     xhttp.open("GET", filename, true);
     xhttp.send();
 }
 
-// Load header.html into the header div
+// Load menu.html into the navbarCollapse div
 loadHTML("navbarCollapse", "../components/menu.html");
 
 // Add an event listener to the call link

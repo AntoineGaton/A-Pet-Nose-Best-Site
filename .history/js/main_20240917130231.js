@@ -11,7 +11,7 @@
 }
 
 // Load header.html into the header div
-loadHTML("navbarCollapse", "../components/menu.html");
+loadHTML("navbarCollapse", "menu.html");
 
 // Add an event listener to the call link
 document.getElementById('call-link').addEventListener('click', function(event) {
@@ -42,6 +42,8 @@ document.getElementById('call-link').addEventListener('click', function(event) {
         }
     }
 });
+
+
 
 //jQuery for page scrolling feature - requires jQuery Easing plugin
 (function ($) {
