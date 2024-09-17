@@ -86,24 +86,9 @@ body {
   color: #777777;
   text-align: left;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-html, body {
   height: 100%;
   margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-.content-wrapper{
-  flex: 1 0 auto;
-}
-
-.footer {
-  flex-shrink: 0;
+  padding:
 }
 
 .custom-icon {

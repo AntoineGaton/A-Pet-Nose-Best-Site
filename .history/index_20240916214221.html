@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="icon" href="./img/logo_icon.ico" type="image/x-icon">
-    <title>A Pet Nose Best</title>
+    <title>A Pet Nose Best: Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A Pet Nose Best offers professional pet care services including walking, boarding, and transportation. Our experienced team ensures your pet's happiness and well-being.">
     <meta name="keywords" content="pet care, pet walking, pet boarding, pet transportation, professional pet services, Fort Lauderdale">
@@ -32,7 +32,9 @@
 <body>
     <!-- PickTime Widget -->
     <!-- This widget allows users to book appointments directly from the website -->
-    <a href="https://www.picktime.com/cf341015-ae32-40b6-9498-ebfb588b7406" class="ptbkbtn" target="_blank" style="position: fixed;right: 0px;top: 50%;margin-top: -90px;float:none;z-index: 9999999"><img border="none" src="https://www.picktime.com/img/widgetButtons/BookingPage/picktime-book-online-right-blue.png" alt="Book an appointment with A Pet Nose Best"/></a>
+    <a href="https://www.picktime.com/cf341015-ae32-40b6-9498-ebfb588b7406" class="ptbkbtn" target="_blank" style="position: fixed;right: 0px;top: 50%;margin-top: -90px;float:none;z-index: 9999999">
+        <img border="none" src="/img/book_now.png" alt="Book an appointment with A Pet Nose Best"/>
+    </a>
 
     <!-- Topbar -->
     <!-- Contains social media links and contact information -->
@@ -85,7 +87,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                <!-- Loading menu.html component with script -->
+                <!-- Add Navigation Links Here -->
+                <!-- TODO: Add navigation menu items -->
             </div>
         </nav>
     </div>
@@ -312,6 +315,92 @@
         <iframe src="https://cdn.lightwidget.com/widgets/800565738f1455838fd62a1326832a98.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
     </div>
 </div>
+
+<!-- Booking Start -->
+<div class="container-fluid">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 py-5 py-lg-0 px-3 px-lg-5">
+                <h4 class="text-secondary mb-3">Going for a vacation?</h4>
+                <h1 class="display-4 mb-4">Book For <span class="text-primary">Your Pet</span></h1>
+                <p>Labore vero lorem eos sed aliquy ipsum aliquy sed. Vero dolore dolore takima ipsum lorem rebum</p>
+                <div class="row py-2">
+                    <div class="col-sm-6">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center mb-2">
+                                <h1 class="flaticon-house font-weight-normal text-secondary m-0 mr-3"></h1>
+                                <h5 class="text-truncate m-0">Pet Boarding</h5>
+                            </div>
+                            <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center mb-2">
+                                <h1 class="flaticon-food font-weight-normal text-secondary m-0 mr-3"></h1>
+                                <h5 class="text-truncate m-0">Pet Feeding</h5>
+                            </div>
+                            <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center mb-2">
+                                <h1 class="flaticon-grooming font-weight-normal text-secondary m-0 mr-3"></h1>
+                                <h5 class="text-truncate m-0">Pet Grooming</h5>
+                            </div>
+                            <p class="m-0">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center mb-2">
+                                <h1 class="flaticon-toy font-weight-normal text-secondary m-0 mr-3"></h1>
+                                <h5 class="text-truncate m-0">Pet Tranning</h5>
+                            </div>
+                            <p class="m-0">Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet</p>
+                        </div>
+                    </div>
+                    <!-- Booking Form Start -->
+            <div class="col-lg-5">
+                <div class="bg-primary py-5 px-4 px-sm-5">
+                    <form class="py-5">
+                        <div class="form-group">
+                            <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <div class="date" id="date" data-target-input="nearest">
+                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Reservation Date" data-target="#date" data-toggle="datetimepicker"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="time" id="time" data-target-input="nearest">
+                                <input type="text" class="form-control border-0 p-4 datetimepicker-input" placeholder="Reservation Time" data-target="#time" data-toggle="datetimepicker"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select class="custom-select border-0 px-4" style="height: 47px;">
+                                <option selected>Select A Service</option>
+                                <option value="1">Service 1</option>
+                                <option value="2">Service 1</option>
+                                <option value="3">Service 1</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button class="btn btn-dark btn-block border-0 py-3" type="submit">Book Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Booking Start -->
 
 <!-- Footer -->
 <div class="container-fluid bg-dark text-white mt-0 py-5 px-sm-3 px-md-5 footer footer-co";">

@@ -102,9 +102,7 @@ html, body {
   flex: 1 0 auto;
 }
 
-.footer {
-  flex-shrink: 0;
-}
+.footer
 
 .custom-icon {
   width: 5rem; 

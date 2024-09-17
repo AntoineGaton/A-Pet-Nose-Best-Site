@@ -1,4 +1,4 @@
- // Function to load an external HTML file. Using this to load components html files into the main index.html file
+ // Function to load an external HTML file. Using this to 
  function loadHTML(id, filename) {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
