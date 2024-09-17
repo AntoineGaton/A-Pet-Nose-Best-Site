@@ -2,5 +2,5 @@
 ./components/blog.html
 ./components/booking.html
 contact.html
-./components/gallery.html
-./components/price.html
+gallery.html
+price.html
