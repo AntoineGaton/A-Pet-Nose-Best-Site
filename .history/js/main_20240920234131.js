@@ -73,11 +73,10 @@ document.getElementById('call-link').addEventListener('click', function(event) {
         $(window).resize(toggleNavbarMethod);
 
         // Initialize EmailJS
-        var USER_ID = "jbPu3Eo8bor4gIrkJ"; // Replace with your actual EmailJS user ID
-        var SERVICE_ID = "service_0egd1t2"; // Replace with your actual EmailJS service ID
-        var TEMPLATE_ID = "service_0egd1t2"; // Replace with your actual EmailJS template ID
+        var YOUR_SERVICE_ID =
+        
+        emailjs.init("jbPu3Eo8bor4gIrkJ"); // Replace with your actual EmailJS user ID
 
-        emailjs.init(USER_ID);
         // Contact form submission
         $("#contactForm").on('submit', function(e) {
             e.preventDefault();
@@ -90,7 +89,7 @@ document.getElementById('call-link').addEventListener('click', function(event) {
             $sendMessageButton.prop("disabled", true);
 
             // EmailJS send
-            emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
                 name: name,
                 email: email,
                 subject: subject,

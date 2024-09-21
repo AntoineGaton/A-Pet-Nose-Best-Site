@@ -16,9 +16,9 @@ function initMap() {
 
     // Add a marker for Fort Lauderdale
     new google.maps.Marker({
-        position: fortLauderdale,
-        map: map,
-        title: "Fort Lauderdale"
+    position: fortLauderdale,
+    map: map,
+    title: "Fort Lauderdale"
     });
 }
 
@@ -55,6 +55,8 @@ document.getElementById('call-link').addEventListener('click', function(event) {
 //jQuery for page scrolling feature - requires jQuery Easing plugin
 (function ($) {
     "use strict";
+
+    
     
     // Dropdown on mouse hover
     $(document).ready(function () {
@@ -71,56 +73,8 @@ document.getElementById('call-link').addEventListener('click', function(event) {
         }
         toggleNavbarMethod();
         $(window).resize(toggleNavbarMethod);
-
-        // Initialize EmailJS
-        var USER_ID = "jbPu3Eo8bor4gIrkJ"; // Replace with your actual EmailJS user ID
-        var SERVICE_ID = "service_0egd1t2"; // Replace with your actual EmailJS service ID
-        var TEMPLATE_ID = "service_0egd1t2"; // Replace with your actual EmailJS template ID
-
-        emailjs.init(USER_ID);
-        // Contact form submission
-        $("#contactForm").on('submit', function(e) {
-            e.preventDefault();
-            var name = $("input#name").val();
-            var email = $("input#email").val();
-            var subject = $("input#subject").val();
-            var message = $("textarea#message").val();
-
-            var $sendMessageButton = $("#sendMessageButton");
-            $sendMessageButton.prop("disabled", true);
-
-            // EmailJS send
-            emailjs.send(SERVICE_ID, TEMPLATE_ID, {
-                name: name,
-                email: email,
-                subject: subject,
-                message: message
-            }).then(
-                function(response) {
-                    $('#success').html("<div class='alert alert-success'>");
-                    $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>");
-                    $('#success > .alert-success').append("<strong>Your message has been sent. </strong>");
-                    $('#success > .alert-success').append('</div>');
-                    $('#contactForm').trigger("reset");
-                },
-                function(error) {
-                    $('#success').html("<div class='alert alert-danger'>");
-                    $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>");
-                    $('#success > .alert-danger').append($("<strong>").text("Sorry " + name + ", it seems that our mail server is not responding. Please try again later!"));
-                    $('#success > .alert-danger').append('</div>');
-                    $('#contactForm').trigger("reset");
-                }
-            ).finally(function() {
-                setTimeout(function () {
-                    $sendMessageButton.prop("disabled", false);
-                }, 1000);
-            });
-        });
-
-        $('#name').focus(function () {
-            $('#success').html('');
-        });
     });
+    
     
     // Back to top button
     $(window).scroll(function () {
@@ -135,6 +89,7 @@ document.getElementById('call-link').addEventListener('click', function(event) {
         return false;
     });
 
+
     // Date and time picker
     $('#date').datetimepicker({
         format: 'L'
@@ -142,6 +97,7 @@ document.getElementById('call-link').addEventListener('click', function(event) {
     $('#time').datetimepicker({
         format: 'LT'
     });
+
 
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
@@ -167,3 +123,4 @@ document.getElementById('call-link').addEventListener('click', function(event) {
     });
     
 })(jQuery);
+

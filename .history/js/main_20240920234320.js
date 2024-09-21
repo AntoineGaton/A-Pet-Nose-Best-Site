@@ -73,9 +73,9 @@ document.getElementById('call-link').addEventListener('click', function(event) {
         $(window).resize(toggleNavbarMethod);
 
         // Initialize EmailJS
-        var USER_ID = "jbPu3Eo8bor4gIrkJ"; // Replace with your actual EmailJS user ID
+        var USER_ID = ;
         var SERVICE_ID = "service_0egd1t2"; // Replace with your actual EmailJS service ID
-        var TEMPLATE_ID = "service_0egd1t2"; // Replace with your actual EmailJS template ID
+        var TEMPLATE_ID = ;
 
         emailjs.init(USER_ID);
         // Contact form submission
