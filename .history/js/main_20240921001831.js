@@ -124,7 +124,7 @@ document.getElementById('call-link').addEventListener('click', function(event) {
         });
     });
     
-// Contact form submission with validation
+    // Contact form submission with validation
 $("#contactForm").on('submit', function(e) {
     e.preventDefault();  // Prevent form submission
 

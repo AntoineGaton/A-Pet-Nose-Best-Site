@@ -123,64 +123,8 @@ document.getElementById('call-link').addEventListener('click', function(event) {
             $('#success').html('');
         });
     });
+
     
-// Contact form submission with validation
-$("#contactForm").on('submit', function(e) {
-    e.preventDefault();  // Prevent form submission
-
-    // Get form values
-    var name = $("input#name").val();
-    var email = $("input#email").val();
-    var subject = $("input#subject").val();
-    var message = $("textarea#message").val();
-
-    var $sendMessageButton = $("#sendMessageButton");
-
-    // Clear previous error messages
-    $('#success').html('');
-
-    // Custom validation for empty fields
-    if (name === "" || email === "" || subject === "" || message === "") {
-        $('#success').html("<div class='alert alert-danger'>");
-        $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>");
-        $('#success > .alert-danger').append("<strong>Please fill out all fields before submitting.</strong>");
-        $('#success > .alert-danger').append('</div>');
-        return;  // Stop the submission if validation fails
-    }
-
-    // Disable the send message button to prevent multiple submissions
-    $sendMessageButton.prop("disabled", true);
-
-    // EmailJS send method to send the form data to the service
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, {
-        from_name: name,  // Pass form values to the template
-        from_email: email,
-        subject: subject,
-        message: message
-    }).then(
-        function(response) {
-            // If successful, show success message
-            $('#success').html("<div class='alert alert-success'>");
-            $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>");
-            $('#success > .alert-success').append("<strong>Your message has been sent. </strong>");
-            $('#success > .alert-success').append('</div>');
-            $('#contactForm').trigger("reset");  // Reset the form
-        },
-        function(error) {
-            // If there's an error, show error message
-            $('#success').html("<div class='alert alert-danger'>");
-            $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>");
-            $('#success > .alert-danger').append($("<strong>").text("Sorry " + name + ", it seems that our mail server is not responding. Please try again later!"));
-            $('#success > .alert-danger').append('</div>');
-            $('#contactForm').trigger("reset");  // Reset the form on error as well
-        }
-    ).finally(function() {
-        // Re-enable the send message button after submission
-        setTimeout(function () {
-            $sendMessageButton.prop("disabled", false);
-        }, 1000);
-    });
-});
 
     // Back to top button behavior
     $(window).scroll(function () {
