@@ -1,26 +1,18 @@
-// Initialize and add Google Map
-function initMap() {
-    const fortLauderdale = { lat: 26.1224, lng: -80.1373 };
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
-        center: fortLauderdale,
-        mapTypeId: "roadmap",
-        disableDefaultUI: true,
-        zoomControl: false,
-        streetViewControl: false,
-        mapTypeControl: false,
-        draggable: false,  // Disables panning/moving the map
-        scrollwheel: false,  // Disables zooming with the mouse scroll wheel
-        gestureHandling: 'none'  // Disables all touch gestures and mouse interactions
-    });
-
-    // Add a marker for Fort Lauderdale
-    new google.maps.Marker({
-    position: fortLauderdale,
-    map: map,
-    title: "Fort Lauderdale"
-    });
+ 
+ // Function to load an external HTML file. Using this to load components html files into the main index.html file
+ function loadHTML(id, filename) {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            document.getElementById(id).innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", filename, true);
+    xhttp.send();
 }
+
+// Load header.html into the header div
+loadHTML("navbarCollapse", "../components/menu.html");
 
 // Add an event listener to the call link
 document.getElementById('call-link').addEventListener('click', function(event) {

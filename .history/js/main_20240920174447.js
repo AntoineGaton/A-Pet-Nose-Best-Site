@@ -2,7 +2,7 @@
 function initMap() {
     const fortLauderdale = { lat: 26.1224, lng: -80.1373 };
     const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
+        zoom: 12,
         center: fortLauderdale,
         mapTypeId: "roadmap",
         disableDefaultUI: true,
@@ -14,6 +14,28 @@ function initMap() {
         gestureHandling: 'none'  // Disables all touch gestures and mouse interactions
     });
 
+    // // Approximate coordinates for Fort Lauderdale boundary
+    // const fortLauderdaleBoundary = [
+    // {lat: 26.1736, lng: -80.1853},
+    // {lat: 26.1736, lng: -80.0893},
+    // {lat: 26.0712, lng: -80.0893},
+    // {lat: 26.0712, lng: -80.1853},
+    // {lat: 26.1736, lng: -80.1853} // Close the polygon
+    // ];
+
+    // // Create a polygon for Fort Lauderdale
+    // const fortLauderdalePolygon = new google.maps.Polygon({
+    // paths: fortLauderdaleBoundary,
+    // strokeColor: "#0000FF",
+    // strokeOpacity: 0.8,
+    // strokeWeight: 2,
+    // fillColor: "#0000FF",
+    // fillOpacity: 0.1
+    // });
+
+    // // Add the polygon to the map
+    // fortLauderdalePolygon.setMap(map);
+
     // Add a marker for Fort Lauderdale
     new google.maps.Marker({
     position: fortLauderdale,
@@ -21,6 +43,44 @@ function initMap() {
     title: "Fort Lauderdale"
     });
 }
+
+// Get the current page filename
+const currentPage = window.location.pathname.split("/").pop();
+
+// Get the home link element
+const homeLink = document.getElementById("home-link");
+
+if (currentPage === "index.html" || currentPage === "") {
+// If on index.html, hide the Home link
+homeLink.style.display = "none";
+} else {
+// On other pages (like contact.html), show the Home link
+homeLink.style.display = "inline-block";
+
+// Modify other nav links to point to sections on index.html
+const navLinks = document.querySelectorAll(".nav-item.nav-link:not(#home-link)");
+navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if (!href.startsWith("http") && !href.startsWith("/")) {
+    link.href = "index.html" + href;
+    }
+});
+}
+
+// Function to load an external HTML file. Using this to load components html files into the main index.html file
+function loadHTML(id, filename) {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            document.getElementById(id).innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", filename, true);
+    xhttp.send();
+}
+
+// Load header.html into the header div
+loadHTML("navbarCollapse", "../components/menu.html");
 
 // Add an event listener to the call link
 document.getElementById('call-link').addEventListener('click', function(event) {

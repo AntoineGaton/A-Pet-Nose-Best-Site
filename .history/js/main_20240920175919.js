@@ -22,6 +22,8 @@ function initMap() {
     });
 }
 
+
+
 // Add an event listener to the call link
 document.getElementById('call-link').addEventListener('click', function(event) {
     // Prevent the default behavior of the link (which would normally trigger the tel: link immediately)

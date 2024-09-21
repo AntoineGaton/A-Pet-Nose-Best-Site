@@ -22,6 +22,22 @@ function initMap() {
     });
 }
 
+
+// Function to load an external HTML file. Using this to load components html files into the main index.html file
+function loadHTML(id, filename) {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            document.getElementById(id).innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", filename, true);
+    xhttp.send();
+}
+
+// Load header.html into the header div
+loadHTML("navbarCollapse", "../components/menu.html");
+
 // Add an event listener to the call link
 document.getElementById('call-link').addEventListener('click', function(event) {
     // Prevent the default behavior of the link (which would normally trigger the tel: link immediately)
