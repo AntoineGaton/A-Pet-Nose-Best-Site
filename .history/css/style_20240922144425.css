@@ -2458,8 +2458,8 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #212529;
-  background-color: var(--primary-beige);
-  border-color: var(--primary-beige);
+  background-color: #F4B393;
+  border-color: #F4B393;
 }
 
 .btn-secondary:hover {
@@ -9832,13 +9832,6 @@ h6 {
 .navbar-dark .navbar-nav .nav-link.active {
   color: #181818;
   background: var(--primary-beige) ;
-}
-
-@media (min-width: 992px) {
-  .custom-right-adjustment {
-      position: relative;
-      right: -8%;
-  }
 }
 
 @media (max-width: 991.98px) {

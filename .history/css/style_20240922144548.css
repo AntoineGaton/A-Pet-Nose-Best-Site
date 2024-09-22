@@ -9834,13 +9834,6 @@ h6 {
   background: var(--primary-beige) ;
 }
 
-@media (min-width: 992px) {
-  .custom-right-adjustment {
-      position: relative;
-      right: -8%;
-  }
-}
-
 @media (max-width: 991.98px) {
   .navbar-dark .navbar-nav .nav-link {
     padding: 10px 15px;

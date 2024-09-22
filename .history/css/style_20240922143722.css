@@ -2458,21 +2458,21 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #212529;
-  background-color: var(--primary-beige);
-  border-color: var(--primary-beige);
+  background-color: #F4B393;
+  border-color: #F4B393;
 }
 
 .btn-secondary:hover {
   color: #fff;
-  background-color: var(--primary-brown);
-  border-color: var(--primary-brown);
+  background-color: #4ab660;
+  border-color: #46ad5b;
 }
 
 .btn-secondary:focus, .btn-secondary.focus {
   color: #fff;
-  background-color: var(--primary-brown);
-  border-color: var(--primary-brown);
-  box-shadow: 0 0 0 0.2rem var(--primary-beige);
+  background-color: #4ab660;
+  border-color: #46ad5b;
+  box-shadow: 0 0 0 0.2rem rgba(91, 170, 108, 0.5);
 }
 
 .btn-secondary.disabled, .btn-secondary:disabled {
@@ -6178,14 +6178,14 @@ a.close.disabled {
 /* Adjust carousel image height for mobile devices */
 @media (max-width: 768px) {
   .carousel-item img {
-      height: 100%; /* Smaller height for mobile screens */
+      height: 300px; /* Smaller height for mobile screens */
   }
 }
 
 /* Additional mobile adjustments for smaller screens */
 @media (max-width: 576px) {
   .carousel-item img {
-      height: 100%; /* Even smaller height for very small screens */
+      height: 250px; /* Even smaller height for very small screens */
   }
 }
 
@@ -6431,13 +6431,13 @@ button.bg-primary:focus {
 }
 
 .bg-secondary {
-  background-color: var(--primary-brown) !important;
+  background-color: var(--primary-beige) !important;
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
 button.bg-secondary:hover,
 button.bg-secondary:focus {
-  background-color: var(--primary-brown) !important;
+  background-color: #46ad5b !important;
 }
 
 .bg-success {
@@ -6457,7 +6457,7 @@ button.bg-success:focus {
 a.bg-info:hover, a.bg-info:focus,
 button.bg-info:hover,
 button.bg-info:focus {
-  background-color: var(--primary-brown) !important;
+  background-color: #117a8b !important;
 }
 
 .bg-warning {
@@ -9832,13 +9832,6 @@ h6 {
 .navbar-dark .navbar-nav .nav-link.active {
   color: #181818;
   background: var(--primary-beige) ;
-}
-
-@media (min-width: 992px) {
-  .custom-right-adjustment {
-      position: relative;
-      right: -8%;
-  }
 }
 
 @media (max-width: 991.98px) {
