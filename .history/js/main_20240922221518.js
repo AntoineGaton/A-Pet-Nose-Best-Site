@@ -40,7 +40,7 @@ document.getElementById('call-link').addEventListener('click', function(event) {
     } else {
         // Try to initiate a phone call from a desktop device (VoIP app)
         try {
-            window.location.href = 'tel:+19543356704';  // Try using VoIP if supported
+            window.location.href = 'tel:+19544083625';  // Try using VoIP if supported
         } catch (e) {
             // Handle the case where VoIP isn't available
             console.log('VoIP application not available or tel protocol not supported.');  // Log error to console
