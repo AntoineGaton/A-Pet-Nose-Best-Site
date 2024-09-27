@@ -381,6 +381,12 @@ legend {
 }
 
 @media (max-width: 460px) {
+  .contact-info-row {
+      display: none;
+  }
+}
+
+@media (max-width: 460px) {
   .contact-info-container {
       display: none;
   }

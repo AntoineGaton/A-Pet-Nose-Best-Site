@@ -54,6 +54,33 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .logo-container {
+            width: 80px;
+            height: 80px;
+            overflow: hidden;
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rounded-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .back-to-top {
+            position: fixed;
+            display: none;
+            right: 30px;
+            bottom: 30px;
+            z-index: 99;
+        }
+    </style>
 </head>
 
 <body>
@@ -76,8 +103,8 @@
             </div>
         </div>
         <!-- Company logo and contact information -->
-        <div class="row py-3 px-lg-5 contactInfoRow">
-            <div class="col-lg-8 text-center text-lg-right contact-info-container">
+        <div class="row py-3 px-lg-5">
+            <div class="col-lg-8 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
                     <!-- Operating hours -->
                     <div class="d-inline-flex flex-column text-center pr-3 border-right">

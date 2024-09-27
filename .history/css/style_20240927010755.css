@@ -380,12 +380,6 @@ legend {
   white-space: normal;
 }
 
-@media (max-width: 460px) {
-  .contact-info-container {
-      display: none;
-  }
-}
-
 @media (max-width: 1200px) {
   legend {
     font-size: calc(1.275rem + 0.3vw) ;
@@ -9834,7 +9828,7 @@ h6 {
   z-index: 1000;
   animation: action 1s infinite alternate;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  
 }
 
 

@@ -1,60 +1,11 @@
-function checkWidth() {
-    var contactInfoRow = document.querySelector('.contactInfoRow');
-    if (window.innerWidth <= 460) {
-        console.log('test');
-        contactInfoRow.style.setProperty('padding-bottom', '0rem', 'important');
-        contactInfoRow.style.setProperty('padding-top', '0rem', 'important');
-    } 
-}
-
-// Run on page load
-checkWidth();
-
-// Run on window resize
-window.addEventListener('resize', checkWidth);
-
-// This function changes the opacity of the link with rel="noreferrer" to 0
-document.addEventListener('DOMContentLoaded', async () => {
-    await changeLinkOpacity();
-});
-
-async function changeLinkOpacity() {
-    // Select the <a> element with rel="noreferrer"
-    let link = document.querySelector('a[rel="noreferrer"]');
-
-    // If the element exists, change its opacity
-    if (link) {
-        link.style.setProperty('opacity', '0', 'important'); // Adding !important
-    }
-}
-
-document.addEventListener('DOMContentLoaded', async () => {
-    await removeNoreferrerLink();
-});
-
-async function removeNoreferrerLink() {
-    // Create a MutationObserver to detect changes in the DOM
-    const observer = new MutationObserver(mutations => {
-        mutations.forEach(mutation => {
-            const link = document.querySelector('a[href="https://elfsight.com/google-reviews-widget/?utm_source=websites&utm_medium=clients&utm_content=google-reviews&utm_term=127.0.0.1&utm_campaign=free-widget"]');
-            if (link) {
-                // Set opacity to 0 with !important
-                link.style.setProperty('opacity', '0', 'important'); 
-            }
-        });
-    });
-
-    // Start observing the body for child nodes being added
-    observer.observe(document.body, { childList: true, subtree: true });
-}
-
+// Function to handle back-to-top button visibility and smooth scrolling
 // Function to handle back-to-top button visibility and smooth scrolling
 (function() {
     var backToTopButton = document.querySelector('.back-to-top');
     
     // Show button after scrolling 200px
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 200) {
+        if (window.pageYOffset > 200) {
             backToTopButton.style.display = "block";
             backToTopButton.style.opacity = "1";
         } else {
@@ -74,6 +25,31 @@ async function removeNoreferrerLink() {
         });
     });
 })();
+
+document.addEventListener('DOMContentLoaded', function() {
+    var backToTopButton = document.querySelector('#header-carousel');
+    var carousel = document.querySelector('.carousel'); // Adjust this selector if needed
+
+    // Add event listener for scroll event
+    window.addEventListener('scroll', function() {
+        var carouselBottom = carousel.getBoundingClientRect().bottom;
+        
+        if (carouselBottom <= 0) {
+        backToTopButton.classList.add('show');
+        } else {
+        backToTopButton.classList.remove('show');
+        }
+    });
+
+    // Optional: Smooth scroll to top when the button is clicked
+    backToTopButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+        });
+    });
+});
 
 // Initialize and add Google Map
 function initMap() {
@@ -227,37 +203,37 @@ document.getElementById('call-link').addEventListener('click', function(event) {
         toggleNavbarMethod();  // Call the method on page load
         $(window).resize(toggleNavbarMethod);  // Reapply the method on window resize
         
-        // /*********** Smooth Scroll for Navigation Menu and Footer ***********/
-        // // Smooth scrolling for anchor links starting with #
-        // $('a[href^="#"]').on('click', function (event) {
-        //     event.preventDefault();  // Prevent default anchor behavior
+        /*********** Smooth Scroll for Navigation Menu and Footer ***********/
+        // Smooth scrolling for anchor links starting with #
+        $('a[href^="#"]').on('click', function (event) {
+            event.preventDefault();  // Prevent default anchor behavior
 
-        //     var target = this.hash;  // Get the target section based on hash
-        //     var $target = $(target);
+            var target = this.hash;  // Get the target section based on hash
+            var $target = $(target);
 
-        //     if ($target.length) {
-        //         // Calculate the offset, accounting for any fixed headers
-        //         var headerOffset = $('.your-fixed-header-class').outerHeight() || 0;
-        //         var elementPosition = $target.offset().top;
-        //         var offsetPosition = elementPosition - headerOffset;
+            if ($target.length) {
+                // Calculate the offset, accounting for any fixed headers
+                var headerOffset = $('.your-fixed-header-class').outerHeight() || 0;
+                var elementPosition = $target.offset().top;
+                var offsetPosition = elementPosition - headerOffset;
 
-        //         // Animate the scroll to the target section
-        //         $('html, body').animate({
-        //             scrollTop: offsetPosition
-        //         }, 1500, 'swing', function() {
-        //             // Callback after animation
-        //             // Must change focus!
-        //             var $target = $(target);
-        //             $target.focus();
-        //             if ($target.is(":focus")) { // Checking if the target was focused
-        //                 return false;
-        //             } else {
-        //                 $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-        //                 $target.focus(); // Set focus again
-        //             }
-        //         });
-        //     }
-        // });
+                // Animate the scroll to the target section
+                $('html, body').animate({
+                    scrollTop: offsetPosition
+                }, 1500, 'swing', function() {
+                    // Callback after animation
+                    // Must change focus!
+                    var $target = $(target);
+                    $target.focus();
+                    if ($target.is(":focus")) { // Checking if the target was focused
+                        return false;
+                    } else {
+                        $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                        $target.focus(); // Set focus again
+                    }
+                });
+            }
+        });
 
         /*********** Back to Top Button ***********/
         // Show the back-to-top button after scrolling 100px

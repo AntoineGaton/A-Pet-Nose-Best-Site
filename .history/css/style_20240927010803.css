@@ -380,12 +380,6 @@ legend {
   white-space: normal;
 }
 
-@media (max-width: 460px) {
-  .contact-info-container {
-      display: none;
-  }
-}
-
 @media (max-width: 1200px) {
   legend {
     font-size: calc(1.275rem + 0.3vw) ;

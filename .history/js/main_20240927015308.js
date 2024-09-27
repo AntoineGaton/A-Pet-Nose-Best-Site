@@ -1,19 +1,3 @@
-function checkWidth() {
-    var contactInfoRow = document.querySelector('.contactInfoRow');
-    if (window.innerWidth <= 460) {
-        console.log('test');
-        contactInfoRow.style.setProperty('padding-bottom', '0rem', 'important');
-        contactInfoRow.style.setProperty('padding-top', '0rem', 'important');
-    } 
-}
-
-// Run on page load
-checkWidth();
-
-// Run on window resize
-window.addEventListener('resize', checkWidth);
-
-// This function changes the opacity of the link with rel="noreferrer" to 0
 document.addEventListener('DOMContentLoaded', async () => {
     await changeLinkOpacity();
 });
@@ -24,6 +8,7 @@ async function changeLinkOpacity() {
 
     // If the element exists, change its opacity
     if (link) {
+        link.style.opacity = "0";
         link.style.setProperty('opacity', '0', 'important'); // Adding !important
     }
 }
@@ -40,7 +25,9 @@ async function removeNoreferrerLink() {
             if (link) {
                 // Set opacity to 0 with !important
                 link.style.setProperty('opacity', '0', 'important'); 
+                // Set height to 790px with !important
             }
+            // link.style.setProperty('height', '700px', 'important');
         });
     });
 
@@ -227,37 +214,37 @@ document.getElementById('call-link').addEventListener('click', function(event) {
         toggleNavbarMethod();  // Call the method on page load
         $(window).resize(toggleNavbarMethod);  // Reapply the method on window resize
         
-        // /*********** Smooth Scroll for Navigation Menu and Footer ***********/
-        // // Smooth scrolling for anchor links starting with #
-        // $('a[href^="#"]').on('click', function (event) {
-        //     event.preventDefault();  // Prevent default anchor behavior
+        /*********** Smooth Scroll for Navigation Menu and Footer ***********/
+        // Smooth scrolling for anchor links starting with #
+        $('a[href^="#"]').on('click', function (event) {
+            event.preventDefault();  // Prevent default anchor behavior
 
-        //     var target = this.hash;  // Get the target section based on hash
-        //     var $target = $(target);
+            var target = this.hash;  // Get the target section based on hash
+            var $target = $(target);
 
-        //     if ($target.length) {
-        //         // Calculate the offset, accounting for any fixed headers
-        //         var headerOffset = $('.your-fixed-header-class').outerHeight() || 0;
-        //         var elementPosition = $target.offset().top;
-        //         var offsetPosition = elementPosition - headerOffset;
+            if ($target.length) {
+                // Calculate the offset, accounting for any fixed headers
+                var headerOffset = $('.your-fixed-header-class').outerHeight() || 0;
+                var elementPosition = $target.offset().top;
+                var offsetPosition = elementPosition - headerOffset;
 
-        //         // Animate the scroll to the target section
-        //         $('html, body').animate({
-        //             scrollTop: offsetPosition
-        //         }, 1500, 'swing', function() {
-        //             // Callback after animation
-        //             // Must change focus!
-        //             var $target = $(target);
-        //             $target.focus();
-        //             if ($target.is(":focus")) { // Checking if the target was focused
-        //                 return false;
-        //             } else {
-        //                 $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-        //                 $target.focus(); // Set focus again
-        //             }
-        //         });
-        //     }
-        // });
+                // Animate the scroll to the target section
+                $('html, body').animate({
+                    scrollTop: offsetPosition
+                }, 1500, 'swing', function() {
+                    // Callback after animation
+                    // Must change focus!
+                    var $target = $(target);
+                    $target.focus();
+                    if ($target.is(":focus")) { // Checking if the target was focused
+                        return false;
+                    } else {
+                        $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                        $target.focus(); // Set focus again
+                    }
+                });
+            }
+        });
 
         /*********** Back to Top Button ***********/
         // Show the back-to-top button after scrolling 100px
