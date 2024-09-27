@@ -25,7 +25,7 @@ function initializeEmailJS(userId) {
  */
 function adjustContactInfoPadding() {
     const contactInfoRow = document.querySelector('.contactInfoRow');
-    const padding = window.innerWidth <= 555 ? '0rem' : '1rem';
+    const padding = window.innerWidth <= 500 ? '0rem' : '1rem';
     contactInfoRow.style.setProperty('padding-bottom', padding, 'important');
     contactInfoRow.style.setProperty('padding-top', padding, 'important');
 }

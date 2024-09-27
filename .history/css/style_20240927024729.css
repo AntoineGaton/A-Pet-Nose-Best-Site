@@ -333,7 +333,6 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
-  appearance: button;
 }
 
 button:not(:disabled),
@@ -405,7 +404,6 @@ progress {
 [type="search"] {
   outline-offset: -2px;
   -webkit-appearance: none;
-  appearance: button;
 }
 
 [type="search"]::-webkit-search-decoration {
@@ -3637,7 +3635,7 @@ input[type="button"].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
-  print-color-adjust: exact;
+  color-adjust: exact;
 }
 
 .custom-control-inline {
@@ -9511,7 +9509,7 @@ button.bg-dark:focus {
 }
 
 .text-truncate {
-  /* white-space: nowrap; */
+  white-space: nowrap;
   white-space: normal;
   overflow: visible;
   text-overflow: clip;

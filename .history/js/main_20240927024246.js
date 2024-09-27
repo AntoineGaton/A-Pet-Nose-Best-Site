@@ -1,6 +1,3 @@
-// Utility Functions
-// -----------------
-
 /**
  * Checks if the user is on a mobile device.
  * @returns {boolean} True if on a mobile device, false otherwise.
@@ -25,7 +22,7 @@ function initializeEmailJS(userId) {
  */
 function adjustContactInfoPadding() {
     const contactInfoRow = document.querySelector('.contactInfoRow');
-    const padding = window.innerWidth <= 555 ? '0rem' : '1rem';
+    const padding = window.innerWidth <= 460 ? '0rem' : '1rem';
     contactInfoRow.style.setProperty('padding-bottom', padding, 'important');
     contactInfoRow.style.setProperty('padding-top', padding, 'important');
 }
