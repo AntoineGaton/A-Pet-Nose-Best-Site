@@ -5,10 +5,7 @@ function checkWidth() {
         contactInfoRow.style.setProperty('padding-bottom', '0rem', 'important');
         contactInfoRow.style.setProperty('padding-top', '0rem', 'important');
     } 
-    else{
-        contactInfoRow.style.setProperty('padding-bottom', '1rem', 'important');
-        contactInfoRow.style.setProperty('padding-top', '1rem', 'important');
-    }
+    
 }
 
 // Run on page load
