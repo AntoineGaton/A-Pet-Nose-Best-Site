@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Call link event listener
     document.getElementById('call-link').addEventListener('click', (event) => {
         event.preventDefault();
-        const phoneNumber = '+19544083625';
+        const phoneNumber = '';
         
         if (isMobileDevice()) {
             window.location.href = `tel:${phoneNumber}`;
