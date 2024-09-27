@@ -118,7 +118,7 @@ html, body {
   width: 80px;
   height: 80px;
   overflow: hidden;
-  border-radius: 10%;
+  border-radius: 50%;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -130,7 +130,6 @@ html, body {
   height: 100%;
   object-fit: cover;
 }
-
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
