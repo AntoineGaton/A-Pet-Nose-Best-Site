@@ -229,15 +229,6 @@ window.addEventListener('resize', adjustContactInfoPadding);
             $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
             return false;
         });
-    // Smooth scrolling for all # links except those in the footer
-    $('a[href^="#"]:not(.footer a[href^="#"])').on('click', function(event) {
-        var target = $(this.getAttribute('href'));
-        if (target.length) {
-            event.preventDefault();
-            $('html, body').stop().animate({
-                scrollTop: target.offset().top - 70 // Adjust the offset as needed
-            }, 1000, 'easeInOutExpo');
-        }
-    });
+        
     });
 })(jQuery);
