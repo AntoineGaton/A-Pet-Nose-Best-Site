@@ -9509,11 +9509,10 @@ button.bg-dark:focus {
 }
 
 .text-truncate {
-  /* white-space: nowrap; */
+  white-space: nowrap;
   white-space: normal;
   overflow: visible;
   text-overflow: clip;
-  word-wrap: break-word;
 }
 
 .text-left {
