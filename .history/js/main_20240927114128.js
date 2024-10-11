@@ -163,8 +163,6 @@ window.addEventListener('resize', adjustContactInfoPadding);
                     subject: $("input#subject").val(),
                     message: $("textarea#message").val()
                 };
-
-                console.log('formData: ', formData)
                 
                 const $sendMessageButton = $("#sendMessageButton");
                 $('#success').html('');
@@ -176,7 +174,12 @@ window.addEventListener('resize', adjustContactInfoPadding);
 
                 $sendMessageButton.prop("disabled", true);
 
-                emailjs.send(SERVICE_ID, TEMPLATE_ID, formData).then(
+                emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message
+                }).then(
                     function () {
                         $('#success').html("<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button><strong>Your message has been sent. </strong></div>");
                         $('#contactForm').trigger("reset");
@@ -238,8 +241,8 @@ window.addEventListener('resize', adjustContactInfoPadding);
             }
         });
 
-        // Smooth scrolling for navigation links and carousel "Learn More" buttons
-        $('.navbar-nav .nav-link, #header-carousel .btn-secondary').on('click', function(event) {
+        // Smooth scrolling for navigation links
+        $('.navbar-nav .nav-link').on('click', function(event) {
             var target = $($(this).attr('href'));
             if (target.length) {
                 event.preventDefault();

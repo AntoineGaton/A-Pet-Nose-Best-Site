@@ -176,7 +176,7 @@ window.addEventListener('resize', adjustContactInfoPadding);
 
                 $sendMessageButton.prop("disabled", true);
 
-                emailjs.send(SERVICE_ID, TEMPLATE_ID, formData).then(
+                emailjs.send(SERVICE_ID, TEMPLATE_ID, ).then(
                     function () {
                         $('#success').html("<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button><strong>Your message has been sent. </strong></div>");
                         $('#contactForm').trigger("reset");

@@ -163,8 +163,6 @@ window.addEventListener('resize', adjustContactInfoPadding);
                     subject: $("input#subject").val(),
                     message: $("textarea#message").val()
                 };
-
-                console.log('formData: ', formData)
                 
                 const $sendMessageButton = $("#sendMessageButton");
                 $('#success').html('');
@@ -176,7 +174,12 @@ window.addEventListener('resize', adjustContactInfoPadding);
 
                 $sendMessageButton.prop("disabled", true);
 
-                emailjs.send(SERVICE_ID, TEMPLATE_ID, formData).then(
+                emailjs.send(SERVICE_ID, TEMPLATE_ID, {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message
+                }console.log).then(
                     function () {
                         $('#success').html("<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button><strong>Your message has been sent. </strong></div>");
                         $('#contactForm').trigger("reset");
