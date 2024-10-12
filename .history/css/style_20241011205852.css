@@ -9945,7 +9945,5 @@ h6 {
 
 #contact-form-container {
   background-color: var(--primary-beige);
-  padding: 2rem;
-  border-radius: 2%;
-  box-shadow: 10px 10px 20px black;
+  
 }

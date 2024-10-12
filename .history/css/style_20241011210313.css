@@ -9947,5 +9947,5 @@ h6 {
   background-color: var(--primary-beige);
   padding: 2rem;
   border-radius: 2%;
-  box-shadow: 10px 10px 20px black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
