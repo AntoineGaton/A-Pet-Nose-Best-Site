@@ -79,8 +79,6 @@
 
     <!-- Content Security Policy -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://maps.googleapis.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https://maps.googleapis.com https://maps.gstatic.com data:;">
-</head>
-
 <body>
     <!-- PickTime Widget -->
     <!-- This widget allows users to book appointments directly from the website -->
@@ -176,19 +174,19 @@
                         <div id="success"></div>
                         <form name="sentMessage" id="contactForm" novalidate="novalidate">
                             <div class="control-group">
-                                <input type="text" class="form-control p-4" id="name" name="name" placeholder="Your Name" required autocomplete="name"/>
+                                <input type="text" class="form-control p-4" id="name" name="name" placeholder="Your Name" required/>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="email" class="form-control p-4" id="email" name="email" placeholder="Your Email" required autocomplete="email"/>
+                                <input type="email" class="form-control p-4" id="email" name="email" placeholder="Your Email" required/>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" name="subject" placeholder="Subject" required autocomplete="off"/>
+                                <input type="text" class="form-control p-4" id="subject" name="subject" placeholder="Subject" required/>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
-                                <textarea class="form-control p-4" rows="6" id="message" name="message" placeholder="Message" required autocomplete="off"></textarea>
+                                <textarea class="form-control p-4" rows="6" id="message" name="message" placeholder="Message" required></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
