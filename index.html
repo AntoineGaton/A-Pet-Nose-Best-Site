@@ -256,31 +256,101 @@
 
         <!-- Team Member Section -->
         <section id="team" class="container-fluid bg-light mt-5 pt-5 pb-3">
-            <div class="d-flex flex-column text-center mb-5">
-                <h4 class="text-secondary mb-3">Team Member</h4>
-                <h1 class="display-4 m-0">Meet The <span class="text-primary">Walker</span></h1>
-            </div>
-            <div class="row" style="justify-content: center;">
-                <div class="col-lg-3 col-md-6">
-                    <div class="team card position-relative overflow-hidden border-0 mb-1">
-                        <img class="card-img-top" src="img/bianca.jpg" style="height: 35em;" alt="Bianca Santiago, Founder & Walker at A Pet Nose Best">
-                        <div class="card-body text-center p-0">
-                            <div class="team-text d-flex flex-column justify-content-center" style="background-color: #A57B60;">
-                                <h5>Bianca Santiago</h5>
-                                <i style="color: white;">Founder & Walker</i>
-                            </div>
-                            <div class="team-social d-flex align-items-center justify-content-center bg-dark">
-                                <a class="btn btn-outline-primary rounded-circle text-center px-0 m-1" style="width: 36px; height: 36px;" href="https://www.instagram.com/apetnosebest?igsh=cjBjZjBiM21zMzk2"><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-outline-primary rounded-circle text-center px-0 m-1" style="width: 36px; height: 36px;" href="https://www.tiktok.com/@apetnosebest"><i class="fa-brands fa-tiktok"></i></a>
-                                <a class="btn btn-outline-primary rounded-circle text-center px-0 m-1" style="width: 36px; height: 36px;" href="https://www.facebook.com/profile.php?id=61556928568108"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-primary rounded-circle text-center px-0 m-1" style="width: 36px; height: 36px;" href="mailto:apetnosebest@gmail.com"><i class="fas fa-envelope"></i></a>
-                                <a class="btn btn-outline-primary rounded-circle text-center px-0 m-1" style="width: 36px; height: 36px;" href="tel:+19544083625" id="call-link"><i class="fas fa-phone"></i></a>
+            <div class="container">
+                <div class="d-flex flex-column text-center mb-5">
+                    <h4 class="text-secondary mb-3">Team Member</h4>
+                    <h1 class="display-4 m-0">Meet The <span class="text-primary">Walkers</span></h1>
+                </div>
+                <!-- Team Members Row -->
+                <div class="row justify-content-center">
+                    <!-- First team member card -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="team card position-relative overflow-hidden border-0 h-100">
+                            <img class="card-img-top" src="img/bianca.jpg" style="height: 35em; object-fit: cover;" alt="Bianca Santiago, Founder & Walker at A Pet Nose Best">
+                            <div class="card-body text-center p-0">
+                                <div class="team-text d-flex flex-column justify-content-center" style="background-color: #A57B60;">
+                                    <h5>Bianca Santiago</h5>
+                                    <i style="color: white;">Founder & Walker</i>
+                                </div>
+                                <div class="team-social d-flex align-items-center justify-content-center bg-dark">
+                                    <a class="btn btn-outline-primary rounded-circle text-center px-0 m-1" style="width: 36px; height: 36px;" href="https://www.instagram.com/apetnosebest?igsh=cjBjZjBiM21zMzk2"><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-outline-primary rounded-circle text-center px-0 m-1" style="width: 36px; height: 36px;" href="https://www.tiktok.com/@apetnosebest"><i class="fa-brands fa-tiktok"></i></a>
+                                    <a class="btn btn-outline-primary rounded-circle text-center px-0 m-1" style="width: 36px; height: 36px;" href="https://www.facebook.com/profile.php?id=61556928568108"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-primary rounded-circle text-center px-0 m-1" style="width: 36px; height: 36px;" href="mailto:apetnosebest@gmail.com"><i class="fas fa-envelope"></i></a>
+                                    <a class="btn btn-outline-primary rounded-circle text-center px-0 m-1" style="width: 36px; height: 36px;" href="tel:+19544083625" id="call-link"><i class="fas fa-phone"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <!-- Second team member card - Jeff -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="team card position-relative overflow-hidden border-0 h-100">
+                            <img class="card-img-top" src="img/jeff.jpg" style="height: 35em; object-fit: cover;" alt="Jeff, Pet Walker at A Pet Nose Best">
+                            <div class="card-body text-center p-0">
+                                <div class="team-text d-flex flex-column justify-content-center" style="background-color: #A57B60;">
+                                    <h5>Jeff</h5>
+                                    <i style="color: white;">Pet Walker</i>
+                                </div>
+                                <div class="team-social d-flex align-items-center justify-content-center bg-dark">
+                                    <a class="btn btn-outline-primary rounded-circle text-center px-0 m-1" style="width: 36px; height: 36px;" href="mailto:apetnosebest@gmail.com" title="Contact Jeff"><i class="fas fa-envelope"></i></a>
+                                    <!-- Bio Modal Trigger -->
+                                    <button class="btn btn-outline-primary rounded-circle text-center px-0 m-1" style="width: 36px; height: 36px;" data-bs-toggle="modal" data-bs-target="#jeffBioModal" title="Read Jeff's Bio">
+                                        <i class="fas fa-user"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </section>
+
+        <!-- Jeff Bio Modal -->
+        <div class="modal fade" id="jeffBioModal" tabindex="-1" role="dialog" aria-labelledby="jeffBioModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: #A57B60;">
+                        <h5 class="modal-title text-white" id="jeffBioModalLabel">
+                            <i class="fas fa-paw mr-2"></i>Meet Jeff - Pet Walker
+                        </h5>
+                        <button type="button" class="close text-white" data-bs-dismiss="modal" aria-label="Close" style="font-size: 1.5rem; opacity: 1;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <div class="row">
+                            <div class="col-md-4 text-center mb-3">
+                                <img src="img/jeff_bio.jpg" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;" alt="Jeff - Pet Walker">
+                                <h4 class="mt-3 mb-1">Jeff</h4>
+                                <p class="text-muted">Pet Walker</p>
+                            </div>
+                            <div class="col-md-8">
+                                <h5 class="text-primary mb-3">
+                                    <i class="fas fa-heart mr-2"></i>About Jeff
+                                </h5>
+                                <p class="mb-3">
+                                    Hi, I'm Jeff — thrilled to be part of A Pet Nose Best!
+                                </p>
+                                <p class="mb-3">
+                                    I recently moved to South Florida from the Black Hills of South Dakota with my wife, our two dogs (Dash the English Shepherd and Lady the Peekapoo), and a lifelong love of animals. I grew up surrounded by dogs, cats, and horses on a small ranchette, and we've always made sure our own kids grew up with pets, too.
+                                </p>
+                                <p class="mb-3">
+                                    I've cared for animals my whole life and know how important it is to spot changes in their behavior and routines. Whether your pet is playful or shy, I'll treat them with the same attention and care I give my own.
+                                </p>
+                                <p class="mb-0">
+                                    Can't wait to meet your furry family members! 🐾
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="mailto:apetnosebest@gmail.com" class="btn btn-primary">
+                            <i class="fas fa-envelope mr-2"></i>Contact Jeff
+                        </a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Services Section -->
         <section id="services" class="container-fluid pt-5">

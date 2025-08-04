@@ -1,5 +1,75 @@
+# Component files (existing)
 ./components/about.html
 ./components/blog.html
 ./components/booking.html
 ./components/gallery.html
 ./components/price.html
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# History files
+.history/
+.vscode-history/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# dotenv environment variables file
+.env
+.env.test
+.env.local
+.env.production
+
+# Temporary folders
+tmp/
+temp/
+
+# Build outputs
+dist/
+build/
+
+# Cache files
+.cache/
+.parcel-cache/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Local configuration files
+config.local.js
+config.local.json
