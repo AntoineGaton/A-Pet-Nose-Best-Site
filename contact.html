@@ -25,7 +25,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png"/>
     <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png"/>
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon-180x180.png"/>
-    
+
     <!-- Android icons -->
     <link rel="manifest" href="./site.webmanifest">
 
@@ -55,30 +55,35 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Structured Data -->
+    <!-- Contact Page Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "A Pet Nose Best",
-      "image": "https://www.apetnosebest.com/img/logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Las Olas Blvd",
-        "addressLocality": "Fort Lauderdale",
-        "addressRegion": "FL",
-        "postalCode": "33301",
-        "addressCountry": "US"
-      },
-      "telephone": "+19544083625",
-      "url": "https://www.apetnosebest.com",
-      "priceRange": "$$",
-      "openingHours": "Mo-Su 08:30-18:00"
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "A Pet Nose Best",
+            "description": "Professional pet care services in Fort Lauderdale, including dog walking, pet boarding, grooming, and training.",
+            "url": "https://apetnosebest.com/contact.html",
+            "telephone": "+1-954-408-3625",
+            "email": "apetnosebest@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Fort Lauderdale",
+                "addressRegion": "FL",
+                "addressCountry": "US"
+            },
+            "openingHours": "Mo-Su 08:30-18:00",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-954-408-3625",
+                "contactType": "customer service",
+                "email": "apetnosebest@gmail.com",
+                "availableLanguage": "English"
+            }
+        }
     }
     </script>
-
-    <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://maps.googleapis.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https://maps.googleapis.com https://maps.gstatic.com data:;">
 </head>
 
 <body>

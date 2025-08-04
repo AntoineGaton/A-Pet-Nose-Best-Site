@@ -1,9 +1,9 @@
-# Component files (existing)
-./components/about.html
-./components/blog.html
-./components/booking.html
-./components/gallery.html
-./components/price.html
+# Component files (legacy - removed)
+# ./components/about.html
+# ./components/blog.html
+# ./components/booking.html
+# ./components/gallery.html
+# ./components/price.html
 
 # IDE and Editor files
 .vscode/
