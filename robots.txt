@@ -1,4 +1,33 @@
+# Robots.txt for A Pet Nose Best
+# Professional Pet Care Services in Fort Lauderdale, FL
+
 User-agent: *
 Allow: /
+
+# Allow all search engines to crawl the site
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Disallow crawling of admin or private directories (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow crawling of important files
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Allow: /lib/
+Allow: /components/
+
+# Sitemap location
 Sitemap: https://www.apetnosebest.com/sitemap.xml
+
+# Crawl delay (optional - helps prevent server overload)
+Crawl-delay: 1
 

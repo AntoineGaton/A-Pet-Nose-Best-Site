@@ -4,15 +4,13 @@ A modern, responsive website for A Pet Nose Best, a premium pet care service com
 
 ## 🐾 About A Pet Nose Best
 
-A Pet Nose Best is a professional pet care service founded by Bianca Santiago, offering comprehensive pet care solutions with a focus on personalized attention and exceptional service quality. Our team of experienced pet care professionals ensures your furry family members receive the love and care they deserve.
+A Pet Nose Best is a professional pet care service founded by Bianca Santiago, offering expert pet care solutions with a focus on personalized attention and exceptional service quality. Our team of experienced pet care professionals ensures your furry family members receive the love and care they deserve.
 
 ## 🌟 Services Offered
 
-- **Dog Walking** - Professional walking services tailored to your pet's needs
+- **Dog Walking** - Expert walking services tailored to your pet's needs and schedule
 - **Pet Boarding** - Safe and comfortable boarding in a home-like environment
-- **Pet Grooming** - Complete grooming services to keep your pets looking their best
-- **Pet Training** - Professional training programs for behavioral improvement
-- **Pet Sitting** - In-home pet sitting services for your peace of mind
+- **Pet Transportation** - Reliable and safe transportation services for your pets
 
 ## 🛠️ Technology Stack
 

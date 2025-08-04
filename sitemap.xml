@@ -1,17 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage -->
   <url>
     <loc>https://www.apetnosebest.com/</loc>
-    <lastmod>2023-05-15</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.apetnosebest.com/img/logo.png</image:loc>
+      <image:title>A Pet Nose Best Logo</image:title>
+      <image:caption>Expert dog walking, pet boarding and transportation services in Fort Lauderdale</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.apetnosebest.com/img/bianca.jpg</image:loc>
+      <image:title>Bianca Santiago - Founder and Pet Walker</image:title>
+      <image:caption>Founder and professional pet walker at A Pet Nose Best</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.apetnosebest.com/img/jeff.jpg</image:loc>
+      <image:title>Jeff - Professional Pet Walker</image:title>
+      <image:caption>Professional pet walker at A Pet Nose Best</image:caption>
+    </image:image>
   </url>
+
+  <!-- Contact Page -->
   <url>
     <loc>https://www.apetnosebest.com/contact.html</loc>
-    <lastmod>2023-05-15</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Add more URLs for other pages if you have them -->
-</urlset>
 
+  <!-- Service Pages (if you add them in the future) -->
+  <!--
+  <url>
+    <loc>https://www.apetnosebest.com/services/dog-walking.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.apetnosebest.com/services/pet-boarding.html</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  -->
+</urlset>
